@@ -49,10 +49,10 @@
   ];
   // Set `photo` to an image path (e.g. 'assets/team/oguz.jpg') to replace the placeholder.
   const TEAM = [
-    { name: 'Oğuz Ağırbaş', role: '[ Role ]', photo: null },
-    { name: 'Sarper Dündar', role: '[ Role ]', photo: null },
-    { name: 'Umut Arda Kapan', role: '[ Role ]', photo: null },
-    { name: 'Ziya Kutay Katlandur', role: '[ Role ]', photo: null },
+    { name: 'Oğuz Ağırbaş', role: { en: 'Creative Writer', tr: 'Kreatif Yazar' }, photo: null },
+    { name: 'Sarper Dündar', role: { en: '3D Artist', tr: '3D Sanatçı' }, photo: null },
+    { name: 'Umut Arda Kapan', role: { en: 'Software Developer', tr: 'Yazılım Geliştirici' }, photo: null },
+    { name: 'Ziya Kutay Katlandur', role: { en: 'UI Designer', tr: 'Arayüz Tasarımcısı' }, photo: null },
   ];
   const STR = {
     en: { emailPh: 'your@email.com', subscribe: 'Subscribe', subscribed: 'Sworn in. The first dispatch is on its way.', topic: 'Topic', name: 'Name', email: 'Email', message: 'Message', send: 'Send', sentLabel: 'Message sent', sentMsg: 'Your envoy has reached the court. We will reply soon.', portrait: 'Portrait' },
@@ -173,7 +173,7 @@
         <div class="portrait">${m.photo ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy">` : esc(STR[state.lang].portrait)}</div>
         <div class="member-info">
           <span lang="tr" class="member-name">${esc(m.name)}</span>
-          <span class="member-role">${esc(m.role)}</span>
+          <span class="member-role">${esc(m.role[state.lang])}</span>
         </div>
       </article>`).join('');
   }
