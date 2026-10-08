@@ -71,8 +71,8 @@
     { k: lang === 'en' ? 'Email' : 'E-posta', lang, v: '[ email address ]', href: '#' },
     { k: 'Discord', lang: 'en', v: '[ Discord invite ]', href: '#' },
     { k: 'X', lang: 'en', v: '[ @handle ]', href: '#' },
-    { k: 'Reddit', lang: 'en', v: '[ r/subreddit ]', href: '#' },
-    { k: 'Steam', lang: 'en', v: 'Bellum Omnium', href: '#' },
+    { k: 'Reddit', lang: 'en', v: 'r/BellumOmnium_TR', href: 'https://www.reddit.com/r/BellumOmnium_TR/' },
+    { k: 'Steam', lang: 'en', v: lang === 'en' ? 'Store page coming soon' : 'Mağaza sayfası yakında', href: null },
     { k: 'LinkedIn', lang: 'en', v: 'gesar-entertainment', href: 'https://www.linkedin.com/company/gesar-entertainment' },
   ];
 
@@ -180,11 +180,11 @@
 
   function renderChannels() {
     $('#channels').innerHTML = channels(state.lang).map(c => `
-      <li><a href="${esc(c.href)}">
+      <li>${c.href ? `<a href="${esc(c.href)}"${/^https?:/.test(c.href) ? ' target="_blank" rel="noopener"' : ''}>` : '<div class="ch-soon">'}
         <span lang="${c.lang}" class="ch-k">${esc(c.k)}</span>
         <span class="ch-v">${esc(c.v)}</span>
-        <span aria-hidden="true" class="ch-arrow">↗</span>
-      </a></li>`).join('');
+        <span aria-hidden="true" class="ch-arrow"${c.href ? '' : ' style="visibility:hidden"'}>↗</span>
+      ${c.href ? '</a>' : '</div>'}</li>`).join('');
   }
 
   function renderTopics() {
