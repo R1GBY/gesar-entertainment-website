@@ -199,6 +199,11 @@ html[data-lang="en"] .tr, html[data-lang="tr"] .en { display: none !important; }
 .nl-form button:hover { background: var(--ink); }
 .nl-done { margin: 0; padding: 18px; border: var(--rule); background: var(--ink); color: var(--paper); font-family: var(--serif); font-size: 19px; }
 
+.nl-wrap { display: grid; gap: 14px; }
+.consent { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.45; cursor: pointer; }
+.consent input { flex: 0 0 auto; width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--ink); cursor: pointer; }
+.privacy-note { margin: 0; font-size: 13px; line-height: 1.5; color: var(--muted-2); }
+
 /* ---------- Team / Contact page heroes ---------- */
 .page-hero { border-bottom: var(--rule); }
 .page-hero-red { background: var(--red); color: #fff; }

@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gesar Entertainment — Bellum Omnium</title>
 <meta name="description" content="Bellum Omnium — a real-time-with-pause high-fantasy grand strategy game by Gesar Entertainment.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="preload" href="assets/fonts/archivo-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -131,11 +131,18 @@
     <div class="newsletter">
       <span class="label"><span class="en">Dispatches</span><span class="tr">Bülten</span></span>
       <h2 class="newsletter-title"><span class="en">Devlogs from the war table, straight to your inbox.</span><span class="tr">Savaş masasından geliştirici günlükleri, doğrudan <span style="white-space:nowrap">e-postanıza.</span></span></h2>
-      <form id="newsletter-form" class="nl-form">
-        <label for="nl-email" class="sr-only" data-t="email"></label>
-        <input id="nl-email" type="email" name="email" required autocomplete="email" data-t-ph="emailPh">
-        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
-        <button type="submit" id="newsletter-submit" data-t="subscribe"></button>
+      <form id="newsletter-form" class="nl-wrap">
+        <div class="nl-form">
+          <label for="nl-email" class="sr-only" data-t="email"></label>
+          <input id="nl-email" type="email" name="email" required autocomplete="email" data-t-ph="emailPh">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+          <button type="submit" id="newsletter-submit" data-t="subscribe"></button>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span id="nl-consent-text"><span class="en">I agree to receive Bellum Omnium devlogs and news by email. I can unsubscribe at any time.</span><span class="tr">Bellum Omnium geliştirme günlüklerini ve haberlerini e-posta ile almayı kabul ediyorum. İstediğim zaman abonelikten çıkabilirim.</span></span>
+        </label>
+        <p class="privacy-note"><span class="en">Your email is used only to send these dispatches. Signups reach our inbox through Web3Forms, whose servers are outside Turkey.</span><span class="tr">E-posta adresiniz yalnızca bu bültenleri göndermek için kullanılır. Kayıtlar, sunucuları Türkiye dışında bulunan Web3Forms aracılığıyla gelen kutumuza iletilir.</span></p>
       </form>
       <p class="form-error" id="newsletter-error" role="alert" hidden data-t="subscribeError"></p>
       <p role="status" class="nl-done" id="newsletter-done" hidden data-t="subscribed"></p>
@@ -184,6 +191,7 @@
         <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
         <p class="form-error" id="contact-error" role="alert" hidden data-t="sendError"></p>
         <div><button type="submit" class="btn btn-red btn-shadow" id="contact-submit"><span data-t="send" id="contact-submit-label"></span> →</button></div>
+        <p class="privacy-note"><span class="en">We use your name, email and message only to reply to you. Messages reach our inbox through Web3Forms, whose servers are outside Turkey.</span><span class="tr">Adınızı, e-postanızı ve mesajınızı yalnızca size yanıt vermek için kullanırız. Mesajlar, sunucuları Türkiye dışında bulunan Web3Forms aracılığıyla gelen kutumuza iletilir.</span></p>
       </form>
       <div role="status" class="sent" id="contact-sent" hidden>
         <span class="sent-label" data-t="sentLabel"></span>

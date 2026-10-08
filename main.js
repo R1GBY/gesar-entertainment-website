@@ -320,6 +320,10 @@
         subject: `New newsletter signup: ${email}`,
         email,
         signup: 'Newsletter (Dispatches)',
+        // Proof of opt-in consent: the exact wording the visitor ticked, and when.
+        consent: 'Yes',
+        consent_text: document.querySelector(`#nl-consent-text .${state.lang}`).textContent.trim(),
+        consented_at: new Date().toISOString(),
         botcheck: data.get('botcheck') ? true : '',
       });
       form.hidden = true;
