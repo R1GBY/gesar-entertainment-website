@@ -68,7 +68,7 @@
   };
   const TOPICS = { en: ['Press', 'Business', 'Jobs', 'Community'], tr: ['Basın', 'İş birliği', 'Kariyer', 'Topluluk'] };
   const channels = lang => [
-    { k: lang === 'en' ? 'Email' : 'E-posta', lang, v: '[ email address ]', href: '#' },
+    { k: lang === 'en' ? 'Email' : 'E-posta', lang, v: 'info@gesarentertainment.me', href: 'mailto:info@gesarentertainment.me' },
     { k: 'Discord', lang: 'en', v: '[ Discord invite ]', href: '#' },
     { k: 'X', lang: 'en', v: '[ @handle ]', href: '#' },
     { k: 'Reddit', lang: 'en', v: 'r/BellumOmnium_TR', href: 'https://www.reddit.com/r/BellumOmnium_TR/' },
