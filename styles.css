@@ -152,7 +152,10 @@ html[data-lang="en"] .tr, html[data-lang="tr"] .en { display: none !important; }
 .realm-banner { position: relative; height: clamp(300px, 34vw, 440px); clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%); padding: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; justify-content: space-between; transition: background .35s ease, color .35s ease; }
 .realm-type { font-family: var(--serif); font-size: 17px; }
 .realm-name { font-weight: 900; font-stretch: 118%; text-transform: uppercase; font-size: clamp(32px, 4vw, 60px); line-height: 0.9; letter-spacing: -0.01em; padding-bottom: 18%; overflow-wrap: anywhere; }
-.realm-desc { margin: 0; font-family: var(--serif); font-size: clamp(26px, 2.4vw, 36px); line-height: 1.15; text-wrap: pretty; }
+.realm-desc { display: grid; font-family: var(--serif); font-size: clamp(26px, 2.4vw, 36px); line-height: 1.15; }
+/* All descriptions share one cell so the block is always as tall as the longest one */
+.realm-desc > p { grid-area: 1 / 1; margin: 0; text-wrap: pretty; visibility: hidden; }
+.realm-desc > p.on { visibility: visible; }
 
 /* ---------- Gallery ---------- */
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(16px, 2vw, 24px); padding: clamp(24px, 4vw, 48px); }

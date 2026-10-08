@@ -25,8 +25,8 @@
       ['Her Irka Bir Büyücü', 'İnsanların Ermiş\'i, elflerin Sîmge\'si, cücelerin Kızıl Rahip\'i, Hive\'ın Kıv\'ı, Sendika\'nın Yumrucan\'ı ya da Kaldelilerin Semagöz\'ü; her birinin kendi büyüleri var.']],
     ['ADM', ['An Empire of Four Kingdoms', 'Dergâh-ı Vâhid governs, Kavm-i Hezâr-Mâbud fights, Bedregân trades and Seng-i Bîdâr labours. Keep their liberty desire in check or watch the empire come apart.'],
       ['Dört Krallıklı İmparatorluk', 'Dergâh-ı Vâhid yönetir, Kavm-i Hezâr-Mâbud savaşır, Bedregân ticaret yapar, Seng-i Bîdâr çalışır. Bağımsızlık arzularını dizginleyin, yoksa imparatorluğun dağılışını izleyin.']],
-    ['ADM', ['Trade & the Sea', 'Gold, labour and trade nodes. The Breakwater Syndicate leases its fleets, plants trading posts and digs canals to rule the island\'s shipping.'],
-      ['Ticaret ve Deniz', 'Altın, işgücü ve ticaret düğümleri. Dalgakıran Sendikası filolarını kiralar, ticaret karakolları kurar ve adanın deniz ticaretine hükmetmek için kanallar kazar.']],
+    ['ADM', ['Trade & the Sea', 'Gold, labour and trade nodes. The Breakwater Syndicate leases its fleets, plants trading posts and digs canals to rule the continent\'s shipping.'],
+      ['Ticaret ve Deniz', 'Altın, işgücü ve ticaret düğümleri. Dalgakıran Sendikası filolarını kiralar, ticaret karakolları kurar ve kıtanın deniz ticaretine hükmetmek için kanallar kazar.']],
     ['MIL', ['War, Day by Day', 'Battles resolve in daily turns. Raise militia and cavalry, hire mercenary companies, besiege provinces and plunder them. The Hive cannot march without its pheromone-bearing generals.'],
       ['Gün Gün Savaş', 'Muharebeler günlük turlarla çözülür. Milis ve süvari toplayın, paralı bölükler kiralayın, eyaletleri kuşatıp yağmalayın. Hive orduları feromon taşıyan generalleri olmadan yürüyemez.']],
     ['DIP', ['Claims & Vassals', 'Fabricate temporary or permanent claims, justify your wars and bind lesser states as vassals. The dwarves claim every iron vein they can see.'],
@@ -37,11 +37,11 @@
       ['Olaylar ve Alametler', 'Kutup ışıkları, Kaldelilerin ipek dökümü, tartışmalı kuyruklu yıldızlar ve kayıp kervanlar. Her seferi gökyüzünün ve yolların getirdikleri şekillendirir.']],
   ];
   const REALMS = [
-    ['Ebedi Nizam', '#5E5680', '#fff', ['Elf Empire', 'Elves made near-immortal by an ancient ritual. They once ruled the whole island and now hold a dwindling empire behind the Great Mountains.'], ['Elf İmparatorluğu', 'Kadim bir ritüelle neredeyse ölümsüzleşmiş elfler. Bir zamanlar tüm adaya hükmettiler; şimdi Yüce Dağlar\'ın ardında giderek eriyen bir imparatorluğu ellerinde tutuyorlar.']],
+    ['Ebedi Nizam', '#5E5680', '#fff', ['Elf Empire', 'Elves made near-immortal by an ancient ritual. They once ruled the whole continent and now hold a dwindling empire behind the Great Mountains.'], ['Elf İmparatorluğu', 'Kadim bir ritüelle neredeyse ölümsüzleşmiş elfler. Bir zamanlar tüm kıtaya hükmettiler; şimdi Yüce Dağlar\'ın ardında giderek eriyen bir imparatorluğu ellerinde tutuyorlar.']],
     ['Kızıl Misak', '#A0503A', '#fff', ['Dwarven Realm', 'The Crimson Pact: dwarves of the iron mountains, zealots of the Crimson Fungus, who claim every iron vein and wall their conquests with the Walls of Barzar.'], ['Cüce Devleti', 'Demir dağlarının cüceleri; Kızıl Fungus\'u kutsal sayar, her demir damarında hak iddia eder ve fetihlerini Barzar Surları\'yla çevirirler.']],
     ['Hive', '#8F5F68', '#fff', ['Hive Kingdom', 'A giant insect kingdom of the east, bound to its Queen\'s pheromones. It colonises rather than conquers and grows its buildings as living flesh.'], ['Kovan Krallığı', 'Kraliçesinin feromonlarına bağlı doğunun dev böcek krallığı. Fethetmek yerine kolonileştirir, binalarını canlı et olarak büyütür.']],
-    ['Dalgakıran Sendikası', '#C9A548', '#141210', ['Amphibian Republic', 'The Breakwater Syndicate: an oligarchic republic of the coastal marshes that wants to own the island\'s shipping. Your rank is the number of galleons you can launch.'], ['Amfibi Cumhuriyeti', 'Adanın deniz ticaretini tekeline almak isteyen kıyı bataklıklarının oligarşik cumhuriyeti. Toplumdaki yerinizi denize indirebildiğiniz kalyon sayısı belirler.']],
-    ['Henâru', '#9DA661', '#141210', ['Henâru Realm', 'The four-armed Henâtirû of the northern plateau. They shun conquest, read fate in the stars from obsidian ziggurats and host the island\'s great pilgrimage.'], ['Henâru Diyarı', 'Kuzey platosunun dört kollu Henâtirû\'su. Fetihten kaçınır, obsidyen zigguratlarından yıldızlarda kaderi okur ve adanın büyük haccına ev sahipliği yaparlar.']],
+    ['Dalgakıran Sendikası', '#C9A548', '#141210', ['Amphibian Republic', 'The Breakwater Syndicate: an oligarchic republic of the coastal marshes that wants to own the continent\'s shipping. Your rank is the number of galleons you can launch.'], ['Amfibi Cumhuriyeti', 'Kıtanın deniz ticaretini tekeline almak isteyen kıyı bataklıklarının oligarşik cumhuriyeti. Toplumdaki yerinizi denize indirebildiğiniz kalyon sayısı belirler.']],
+    ['Henâru', '#9DA661', '#141210', ['Henâru Realm', 'The four-armed Henâtirû of the northern plateau. They shun conquest, read fate in the stars from obsidian ziggurats and host the continent\'s great pilgrimage.'], ['Henâru Diyarı', 'Kuzey platosunun dört kollu Henâtirû\'su. Fetihten kaçınır, obsidyen zigguratlarından yıldızlarda kaderi okur ve kıtanın büyük haccına ev sahipliği yaparlar.']],
     ['Dergâh-ı Vâhid', '#4E6B50', '#fff', ['Human Empire · Rule', 'The imperial seat of the humans. It holds political power over four quarrelling kingdoms bound by a shared, ever-growing pantheon.'], ['İnsan İmparatorluğu · Yönetim', 'İnsanların imparatorluk merkezi. Ortak ve sürekli büyüyen bir panteonla birbirine bağlı, kavgacı dört krallığın siyasi yönetimini elinde tutar.']],
     ['Bedregân', '#5F5F8A', '#fff', ['Human Kingdom · Trade', 'The empire\'s merchant kingdom. It favours peace and trade with loyal brethren abroad, and pulls against its warlike neighbours.'], ['İnsan Krallığı · Ticaret', 'İmparatorluğun tüccar krallığı. Barışı ve sınır ötesindeki vefalı kardeşlerle ticareti savunur, savaşçı komşularına direnir.']],
     ['Kavm-i Hezâr-Mâbud', '#B4CBA8', '#141210', ['Human Kingdom · Military', 'The people of a thousand gods and the empire\'s sword-arm. It takes in the gods of every land it reaches and wants many more.'], ['İnsan Krallığı · Askeriye', 'Bin tanrının kavmi, imparatorluğun kılıç kolu. Ulaştığı her diyarın tanrılarını panteona katar ve daha fazlasını ister.']],
@@ -70,7 +70,7 @@
   const channels = lang => [
     { k: lang === 'en' ? 'Email' : 'E-posta', lang, v: 'info@gesarentertainment.me', href: 'mailto:info@gesarentertainment.me' },
     { k: 'Discord', lang: 'en', v: '[ Discord invite ]', href: '#' },
-    { k: 'X', lang: 'en', v: '[ @handle ]', href: '#' },
+    { k: 'X', lang: 'en', v: '@GesarEnt', href: 'https://x.com/GesarEnt' },
     { k: 'Reddit', lang: 'en', v: 'r/BellumOmnium_TR', href: 'https://www.reddit.com/r/BellumOmnium_TR/' },
     { k: 'Steam', lang: 'en', v: lang === 'en' ? 'Store page coming soon' : 'Mağaza sayfası yakında', href: null },
     { k: 'LinkedIn', lang: 'en', v: 'gesar-entertainment', href: 'https://www.linkedin.com/company/gesar-entertainment' },
@@ -127,9 +127,10 @@
     const i = state.lang === 'en' ? 3 : 4;
     $('#realm-list').innerHTML = REALMS.map((r, n) => `
       <li><button type="button" data-realm="${n}">
-        <span class="r-name">${esc(r[0])}</span>
+        <span class="r-name" lang="${r[0] === 'Hive' ? 'en' : 'tr'}">${esc(r[0])}</span>
         <span class="r-type">${esc(r[i][0])}</span>
       </button></li>`).join('');
+    $('#realm-desc').innerHTML = REALMS.map(r => `<p>${esc(r[i][1])}</p>`).join('');
     updateRealm();
   }
 
@@ -146,8 +147,11 @@
     banner.style.background = r[1];
     banner.style.color = r[2];
     $('#realm-type').textContent = r[i][0];
-    $('#realm-name').textContent = r[0];
-    $('#realm-desc').textContent = r[i][1];
+    const nameEl = $('#realm-name');
+    nameEl.textContent = r[0];
+    // Uppercasing follows the name's language: 'Hive' is English (HIVE), the rest are Turkish (EBEDİ NİZAM).
+    nameEl.lang = r[0] === 'Hive' ? 'en' : 'tr';
+    $$('#realm-desc > p').forEach((p, n) => p.classList.toggle('on', n === state.realm));
   }
 
   function renderPhases() {
