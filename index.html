@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gesar Entertainment — Bellum Omnium</title>
+<meta name="description" content="Bellum Omnium — a real-time-with-pause high-fantasy grand strategy game by Gesar Entertainment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+<header class="topbar">
+  <a href="#" class="brand" data-go="game" aria-label="Gesar Entertainment — home">
+    <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true"><use href="#gesar-mark"></use></svg>
+    <span lang="en" class="brand-word"><b>Gesar</b> <span>Entertainment</span></span>
+  </a>
+  <nav aria-label="Primary" class="primary-nav">
+    <a href="#" data-go="game" lang="la">Bellum Omnium</a>
+    <a href="#team" data-go="team"><span class="en">Team</span><span class="tr">Ekip</span></a>
+    <a href="#contact" data-go="contact"><span class="en">Contact</span><span class="tr">İletişim</span></a>
+  </nav>
+  <div class="topbar-end">
+    <div role="group" aria-label="Language" class="lang-switch">
+      <button type="button" data-set-lang="en">EN</button>
+      <button type="button" data-set-lang="tr">TR</button>
+    </div>
+    <a href="#" class="topbar-cta"><span class="en">Wishlist</span><span class="tr">İstek listesi</span></a>
+  </div>
+</header>
+
+<!-- ============ GAME ============ -->
+<main data-view="game">
+  <section class="hero">
+    <div class="hero-kicker"><span class="en"><span lang="en">Gesar Entertainment</span> presents</span><span class="tr"><span lang="en">Gesar Entertainment</span> sunar</span></div>
+    <h1 class="hero-logo"><img src="assets/bo-logotype-2k.jpg" alt="Bellum Omnium" width="2752" height="1536"></h1>
+    <div class="hero-body">
+      <p class="hero-tagline">
+        <span class="en">Rule a realm where statecraft, steel and sorcery collide.</span>
+        <span class="tr">Devlet aklının, çeliğin ve büyünün çarpıştığı bir krallığı yönetin.</span>
+      </p>
+      <div class="hero-ctas">
+        <a href="#" class="btn btn-red btn-shadow"><span class="en">Wishlist on <span lang="en">Steam</span></span><span class="tr"><span lang="en">Steam</span>'de istek listene ekle</span> <span aria-hidden="true">→</span></a>
+        <a href="#" class="btn btn-ghost"><span class="en">Join the <span lang="en">Discord</span></span><span class="tr"><span lang="en">Discord</span>'a katıl</span></a>
+      </div>
+    </div>
+    <div class="hero-stripe" aria-hidden="true"></div>
+  </section>
+
+  <section class="bordered">
+    <div class="eyebrow"><span><span class="en">The premise</span><span class="tr">Öncül</span></span><span lang="la">Bellum omnium contra omnes</span></div>
+    <div class="about-grid">
+      <h2 data-reveal class="display-serif"><span class="en">The war of all <em>against all.</em></span><span class="tr">Herkesin herkese <em>karşı savaşı.</em></span></h2>
+      <div data-reveal class="prose">
+        <div class="en">
+          <p>Bellum Omnium is a grand strategy game set on Aldenmere, a hand-drawn island cut off from the world by ocean. You rule a realm through its court, economy, faith and armies, while elves, dwarves, humans and stranger powers fight over the map.</p>
+          <p>It is built in the tradition of Europa Universalis, with magic woven into statecraft. Where the laws of nature tire, mages are born. States hunt them, bind them and send them to war beside their armies.</p>
+          <p>The elves once ruled the whole island; now their empire is dwindling. Every realm, even at war, sends its envoys on the great pilgrimage to Henâru. No two campaigns write the same history.</p>
+        </div>
+        <div class="tr" lang="tr">
+          <p>Bellum Omnium, okyanusla dünyadan kopmuş, elle çizilmiş Aldenmere adasında geçen bir büyük strateji oyunudur. Bir ülkeyi sarayı, ekonomisi, inancı ve ordularıyla yönetirken elfler, cüceler, insanlar ve daha tuhaf güçler harita için savaşır.</p>
+          <p>Europa Universalis geleneğinde inşa edildi ve büyü devlet yönetiminin içine işlendi. Doğa yasalarının yorulduğu yerlerde büyücüler doğar. Devletler onları arar, denetim altına alır ve ordularının yanında savaşa sürer.</p>
+          <p>Elfler bir zamanlar tüm adaya hükmediyordu; şimdi imparatorlukları eriyor. Her ülke, savaş hâlindeyken bile, elçilerini Henâru'ya, büyük hacca gönderir. Hiçbir sefer aynı tarihi yazmaz.</p>
+        </div>
+      </div>
+    </div>
+    <div class="parallax parallax-about"><div data-parallax><img src="assets/ink-wanderer.png" alt="A lone wanderer on a snowy ridge above a misty plain" loading="lazy"></div></div>
+    <dl class="facts" id="facts"></dl>
+  </section>
+
+  <section class="powers" id="powers"></section>
+
+  <section class="bordered">
+    <div class="eyebrow"><span><span class="en">Pillars</span><span class="tr">Sütunlar</span></span><span lang="la">Bellum Omnium</span></div>
+    <h2 data-reveal class="display-sans"><span class="en">Ten systems.<br>One realm.</span><span class="tr">On sistem.<br>Tek krallık.</span></h2>
+    <div id="features"></div>
+  </section>
+
+  <section class="realms-section">
+    <div class="eyebrow eyebrow-dark"><span><span class="en">The realms</span><span class="tr">Krallıklar</span></span><span><span class="en">Hover or tab to inspect</span><span class="tr">İncelemek için üzerine gelin</span></span></div>
+    <h2 data-reveal class="display-sans realms-title"><span class="en">Nine crowns.<br>One island.</span><span class="tr">Dokuz taç.<br>Tek ada.</span></h2>
+    <figure class="map-figure">
+      <img src="assets/aldenmere-map-2k.jpg" alt="Map of the island of Aldenmere and the surrounding lands, showing the nine realms" loading="lazy">
+      <figcaption><span class="map-name">Aldenmere</span><span class="map-sub"><span class="en">and the surrounding lands</span><span class="tr">ve çevresindeki topraklar</span></span></figcaption>
+    </figure>
+    <div class="realms-grid">
+      <ul class="realm-list" id="realm-list"></ul>
+      <div class="realm-detail">
+        <div class="realm-banner" id="realm-banner">
+          <span class="realm-type" id="realm-type"></span>
+          <span class="realm-name" id="realm-name"></span>
+        </div>
+        <p class="realm-desc" id="realm-desc"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="eyebrow"><span><span class="en">From the war table</span><span class="tr">Savaş masasından</span></span><span><span class="en">Concept art</span><span class="tr">Konsept sanatı</span></span></div>
+    <div class="gallery">
+      <figure data-reveal class="wide">
+        <div class="frame frame-wide"><img src="assets/harbor-quay.png" alt="A crowded pilgrim harbour with a towering galleon" loading="lazy"></div>
+      </figure>
+      <figure data-reveal>
+        <div class="frame"><img src="assets/ink-red-forest.png" alt="Ink-wash river valley under crimson forests" loading="lazy"></div>
+      </figure>
+      <figure data-reveal>
+        <div class="frame"><img src="assets/ink-broadside.png" alt="A three-masted ship firing a broadside in smoke" loading="lazy"></div>
+      </figure>
+      <figure data-reveal>
+        <div class="frame"><img src="assets/beast-march.png" alt="A rider on a great shaggy beast crossing dry plains" loading="lazy"></div>
+      </figure>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="eyebrow eyebrow-pad"><span><span class="en">Roadmap</span><span class="tr">Yol haritası</span></span><span>Unity · EN / TR</span></div>
+    <div class="phases" id="phases"></div>
+  </section>
+
+  <section class="split">
+    <div class="studio">
+      <span class="label"><span class="en">The studio</span><span class="tr">Stüdyo</span></span>
+      <h2 class="studio-title">Realms that remember.</h2>
+      <p class="studio-copy"><span class="en"><span lang="en">Gesar Entertainment</span> is an independent studio building strategy games with long memories.</span><span class="tr"><span lang="en">Gesar Entertainment</span>, uzun hafızalı strateji oyunları geliştiren bağımsız bir stüdyodur.</span></p>
+      <div><a href="#team" data-go="team" class="btn btn-dark"><span class="en">Meet the team →</span><span class="tr">Ekiple tanışın →</span></a></div>
+    </div>
+    <div class="newsletter">
+      <span class="label"><span class="en">Dispatches</span><span class="tr">Bülten</span></span>
+      <h2 class="newsletter-title"><span class="en">Devlogs from the war table, straight to your inbox.</span><span class="tr">Savaş masasından geliştirici günlükleri, doğrudan e-postanıza.</span></h2>
+      <form id="newsletter-form" class="nl-form">
+        <label for="nl-email" class="sr-only" data-t="email"></label>
+        <input id="nl-email" type="email" required data-t-ph="emailPh">
+        <button type="submit" data-t="subscribe"></button>
+      </form>
+      <p role="status" class="nl-done" id="newsletter-done" hidden data-t="subscribed"></p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ TEAM ============ -->
+<main data-view="team" hidden>
+  <section class="page-hero page-hero-red">
+    <div class="eyebrow eyebrow-light"><span lang="en">Gesar Entertainment</span><span lang="en">Realms That Remember</span></div>
+    <h1 class="page-title page-title-team"><span class="en">Team</span><span class="tr">Ekip</span></h1>
+  </section>
+  <div class="parallax parallax-team"><div data-parallax><img src="assets/riders-mist.png" alt="Two riders meeting a veiled figure in a misty flooded forest" loading="lazy"></div></div>
+  <section class="team-intro">
+    <h2 class="display-serif-sm"><span class="en">A small studio for <em>grand strategy.</em></span><span class="tr">Büyük strateji için <em>küçük bir stüdyo.</em></span></h2>
+    <div class="prose prose-sm">
+      <p><span class="en"><span lang="en">Gesar Entertainment</span> is an independent game studio. Our first title, Bellum Omnium, is a high-fantasy grand strategy game in development in Unity, with English and Turkish localisation.</span><span class="tr"><span lang="en">Gesar Entertainment</span> bağımsız bir oyun stüdyosudur. İlk oyunumuz Bellum Omnium, Unity ile geliştirilen, İngilizce ve Türkçe yerelleştirmeli bir fantastik büyük strateji oyunudur.</span></p>
+      <p class="placeholder-note">[ Studio bio — where you are based, when you started, why grand strategy. ]</p>
+    </div>
+  </section>
+  <section class="team-grid" id="team-grid"></section>
+  <section class="team-cta">
+    <p><span class="en">Love maps, ledgers and long campaigns? Write to us.</span><span class="tr">Haritaları, defterleri ve uzun seferleri mi seviyorsunuz? Bize yazın.</span></p>
+    <a href="#contact" data-go="contact" class="btn btn-red btn-shadow"><span class="en">Contact →</span><span class="tr">İletişim →</span></a>
+  </section>
+</main>
+
+<!-- ============ CONTACT ============ -->
+<main data-view="contact" hidden>
+  <section class="page-hero page-hero-dark">
+    <div class="eyebrow eyebrow-dark"><span lang="en">Gesar Entertainment</span><span><span class="en">Press · Business · Jobs · Community</span><span class="tr">Basın · İş · Kariyer · Topluluk</span></span></div>
+    <h1 class="page-title page-title-contact"><span class="en">Contact</span><span class="tr">İletişim</span><span class="dot">.</span></h1>
+  </section>
+  <div class="parallax parallax-contact"><div data-parallax><img src="assets/marsh-rider.png" alt="A rider and a great beast pausing at the edge of a marsh" loading="lazy"></div></div>
+  <section class="contact-grid">
+    <ul class="channels" id="channels"></ul>
+    <div class="contact-form-wrap">
+      <form id="contact-form" class="contact-form">
+        <fieldset>
+          <legend data-t="topic"></legend>
+          <div class="topics" id="topics"></div>
+        </fieldset>
+        <label><span data-t="name"></span><input required type="text" name="name" autocomplete="name"></label>
+        <label><span data-t="email"></span><input required type="email" name="email" autocomplete="email"></label>
+        <label><span data-t="message"></span><textarea required rows="6" name="message"></textarea></label>
+        <div><button type="submit" class="btn btn-red btn-shadow"><span data-t="send"></span> →</button></div>
+      </form>
+      <div role="status" class="sent" id="contact-sent" hidden>
+        <span class="sent-label" data-t="sentLabel"></span>
+        <p class="sent-msg" data-t="sentMsg"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-mark">
+    <svg viewBox="-3 -3 106 106" aria-hidden="true"><circle cx="50" cy="50" r="53" fill="#fff"></circle><use href="#gesar-mark"></use></svg>
+    <span>Gesar</span>
+  </div>
+  <div class="footer-bar">
+    <span>© 2026 <span lang="en">Gesar Entertainment</span> — <span lang="en">Realms That Remember</span></span>
+    <nav aria-label="Social">
+      <a href="#" lang="en">Steam</a>
+      <a href="#" lang="en">Discord</a>
+      <a href="#">X</a>
+      <a href="#" lang="en">Reddit</a>
+      <a href="https://www.linkedin.com/company/gesar-entertainment" lang="en">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="gesar-clip"><circle cx="50" cy="50" r="45.7"></circle></clipPath>
+    <g id="gesar-mark">
+      <circle cx="50" cy="50" r="50" fill="#B5332E"></circle>
+      <circle cx="50" cy="50" r="48.5" fill="#fff"></circle>
+      <circle cx="50" cy="50" r="45.7" fill="#B5332E"></circle>
+      <g clip-path="url(#gesar-clip)" stroke="#fff" stroke-width="4" fill="none">
+        <path d="M48 3 L12.5 91"></path><path d="M52 3 L87.5 91"></path><path d="M50 3 V100"></path><path d="M0 42.1 H100"></path><path d="M0 54 H100"></path>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<script src="main.js"></script>
+</body>
+</html>
