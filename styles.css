@@ -255,3 +255,7 @@ html[data-lang="en"] .tr, html[data-lang="tr"] .en { display: none !important; }
 .topbar-cta .soon-tag { margin-left: 8px; font-size: 15px; }
 .footer-soon { opacity: 0.85; }
 .ch-soon { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 22px var(--gutter); color: var(--muted-2); }
+
+.form-error { margin: 0; padding: 14px 16px; border: var(--rule); background: var(--paper); color: var(--red-ink); font-family: var(--serif); font-size: 17px; }
+.contact-form button[disabled] { opacity: 0.7; cursor: progress; }
+.nl-form button[disabled] { opacity: 0.7; cursor: progress; }

@@ -133,9 +133,11 @@
       <h2 class="newsletter-title"><span class="en">Devlogs from the war table, straight to your inbox.</span><span class="tr">Savaş masasından geliştirici günlükleri, doğrudan e-postanıza.</span></h2>
       <form id="newsletter-form" class="nl-form">
         <label for="nl-email" class="sr-only" data-t="email"></label>
-        <input id="nl-email" type="email" required data-t-ph="emailPh">
-        <button type="submit" data-t="subscribe"></button>
+        <input id="nl-email" type="email" name="email" required autocomplete="email" data-t-ph="emailPh">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        <button type="submit" id="newsletter-submit" data-t="subscribe"></button>
       </form>
+      <p class="form-error" id="newsletter-error" role="alert" hidden data-t="subscribeError"></p>
       <p role="status" class="nl-done" id="newsletter-done" hidden data-t="subscribed"></p>
     </div>
   </section>
@@ -180,7 +182,9 @@
         <label><span data-t="name"></span><input required type="text" name="name" autocomplete="name"></label>
         <label><span data-t="email"></span><input required type="email" name="email" autocomplete="email"></label>
         <label><span data-t="message"></span><textarea required rows="6" name="message"></textarea></label>
-        <div><button type="submit" class="btn btn-red btn-shadow"><span data-t="send"></span> →</button></div>
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        <p class="form-error" id="contact-error" role="alert" hidden data-t="sendError"></p>
+        <div><button type="submit" class="btn btn-red btn-shadow" id="contact-submit"><span data-t="send" id="contact-submit-label"></span> →</button></div>
       </form>
       <div role="status" class="sent" id="contact-sent" hidden>
         <span class="sent-label" data-t="sentLabel"></span>

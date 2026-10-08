@@ -55,8 +55,8 @@
     { name: 'Ziya Kutay Katlandur', role: { en: 'UI Designer', tr: 'Arayüz Tasarımcısı' }, photo: null },
   ];
   const STR = {
-    en: { emailPh: 'your@email.com', subscribe: 'Subscribe', subscribed: 'Sworn in. The first dispatch is on its way.', topic: 'Topic', name: 'Name', email: 'Email', message: 'Message', send: 'Send', sentLabel: 'Message sent', sentMsg: 'Your envoy has reached the court. We will reply soon.', portrait: 'Portrait' },
-    tr: { emailPh: 'eposta@adresiniz.com', subscribe: 'Abone ol', subscribed: 'Yemin edildi. İlk bülten yolda.', topic: 'Konu', name: 'Ad', email: 'E-posta', message: 'Mesaj', send: 'Gönder', sentLabel: 'Mesaj gönderildi', sentMsg: 'Elçiniz saraya ulaştı. Yakında yanıt vereceğiz.', portrait: 'Portre' },
+    en: { emailPh: 'your@email.com', subscribe: 'Subscribe', subscribed: 'Sworn in. The first dispatch is on its way.', topic: 'Topic', name: 'Name', email: 'Email', message: 'Message', send: 'Send', sentLabel: 'Message sent', sentMsg: 'Your envoy has reached the court. We will reply soon.', sending: 'Sending…', subscribeError: 'The messenger was lost on the road. Please try again.', sendError: 'Your envoy was turned back. Please try again, or write to us at info@gesarentertainment.me.', portrait: 'Portrait' },
+    tr: { emailPh: 'eposta@adresiniz.com', subscribe: 'Abone ol', subscribed: 'Yemin edildi. İlk bülten yolda.', topic: 'Konu', name: 'Ad', email: 'E-posta', message: 'Mesaj', send: 'Gönder', sentLabel: 'Mesaj gönderildi', sentMsg: 'Elçiniz saraya ulaştı. Yakında yanıt vereceğiz.', sending: 'Gönderiliyor…', subscribeError: 'Ulak yolda kayboldu. Lütfen tekrar deneyin.', sendError: 'Elçiniz geri çevrildi. Lütfen tekrar deneyin ya da info@gesarentertainment.me adresine yazın.', portrait: 'Portre' },
   };
   const FACTS = {
     en: [['Genre', 'Grand strategy'], ['Mode', 'Real-time with pause'], ['Setting', 'High fantasy'], ['Engine', 'Unity'], ['Languages', 'English · Turkish'], ['Status', 'Pre-alpha']],
@@ -286,15 +286,78 @@
   realmList.addEventListener('mouseover', pickRealm);
   realmList.addEventListener('focusin', pickRealm);
 
-  $('#newsletter-form').addEventListener('submit', e => {
+  // Form submissions are emailed to info@gesarentertainment.me via Web3Forms.
+  // The access key is public by design (it only allows sending to the registered address).
+  const WEB3FORMS_KEY = 'e936a78e-01ae-4d6f-85fd-e691e0b77c64';
+  async function sendToWeb3Forms(fields) {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ access_key: WEB3FORMS_KEY, from_name: 'Gesar Entertainment website', language: state.lang.toUpperCase(), ...fields }),
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || !json.success) throw new Error(json.message || res.status);
+  }
+
+  // Newsletter signups land in the inbox until a mailing-list service is chosen.
+  $('#newsletter-form').addEventListener('submit', async e => {
     e.preventDefault();
-    e.currentTarget.hidden = true;
-    $('#newsletter-done').hidden = false;
+    const form = e.currentTarget;
+    const btn = $('#newsletter-submit');
+    const err = $('#newsletter-error');
+    if (btn.disabled) return;
+    const data = new FormData(form);
+    const email = String(data.get('email') || '').trim();
+    btn.disabled = true;
+    err.hidden = true;
+    btn.textContent = STR[state.lang].sending;
+    try {
+      await sendToWeb3Forms({
+        subject: `New newsletter signup: ${email}`,
+        email,
+        signup: 'Newsletter (Dispatches)',
+        botcheck: data.get('botcheck') ? true : '',
+      });
+      form.hidden = true;
+      $('#newsletter-done').hidden = false;
+    } catch (ex) {
+      err.hidden = false;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = STR[state.lang].subscribe;
+    }
   });
-  $('#contact-form').addEventListener('submit', e => {
+
+  $('#contact-form').addEventListener('submit', async e => {
     e.preventDefault();
-    e.currentTarget.hidden = true;
-    $('#contact-sent').hidden = false;
+    const form = e.currentTarget;
+    const btn = $('#contact-submit');
+    const label = $('#contact-submit-label');
+    const err = $('#contact-error');
+    if (btn.disabled) return;
+    const data = new FormData(form);
+    const topic = TOPICS.en[state.topic];
+    const name = String(data.get('name') || '').trim();
+    btn.disabled = true;
+    err.hidden = true;
+    label.textContent = STR[state.lang].sending;
+    try {
+      await sendToWeb3Forms({
+        subject: `[${topic}] Website message from ${name}`,
+        topic,
+        name,
+        email: data.get('email'),
+        message: data.get('message'),
+        botcheck: data.get('botcheck') ? true : '',
+      });
+      form.hidden = true;
+      $('#contact-sent').hidden = false;
+    } catch (ex) {
+      err.hidden = false;
+    } finally {
+      btn.disabled = false;
+      label.textContent = STR[state.lang].send;
+    }
   });
 
   window.addEventListener('scroll', onScroll, { passive: true });
